@@ -22,3 +22,12 @@ The kind of dialog that causes [onPause()](https://developer.android.com/guide/c
 
 Even though AlertDialog in Compose doesn't call onPause
 
+---
+
+## When the system invoke onDestroy()?
+
+onDestroy() is called before the activity is destroyed. The system invokes this callback for one of two reasons:
+
+- The activity is finishing, due to the user completely dismissing the activity or due to finish() being called on the activity.
+- The system is temporarily destroying the activity due to a configuration change, such as device rotation or entering multi-window mode.
+
